@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2>Realizar Apuesta
+</h2>
+<form method="POST">
+    <label for="event">Evento:</label>
+    <select id="event" name="event">
+        <!-- Opciones de eventos -->
+    </select>
+    <label for="bet_type">Tipo de Apuesta:</label>
+    <select id="bet_type" name="bet_type">
+        <!-- Opciones de tipos de apuesta -->
+    </select>
+    <label for="amount">Monto a Apostar:</label>
+    <input type="number" id="amount" name="amount" required>
+    <button type="submit">Confirmar Apuesta</button>
+</form>
+{% endblock %}
+

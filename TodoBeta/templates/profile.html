@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2>Perfil de Usuario</h2>
+<p>Nombre: Usuario</p>
+<p>Correo Electrónico: usuario@ejemplo.com</p>
+<img src="{{ url_for('static', filename='img/profile.png') }}" alt="Foto de Perfil">
+<h3>Historial de Apuestas</h3>
+<!-- Listado de apuestas realizadas -->
+<h3>Configuración de Cuenta</h3>
+<!-- Opciones para cambiar contraseña y preferencias -->
+{% endblock %}
+

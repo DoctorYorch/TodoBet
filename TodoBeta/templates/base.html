@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TodoBet</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+</head>
+<body>
+    <header class="header">
+        <nav>
+            <ul>
+                <li><a class="nav-button" href="{{ url_for('index') }}">Inicio</a></li>
+                <li><a class="nav-button" href="{{ url_for('events') }}">Eventos</a></li>
+                <li><a class="nav-button" href="{{ url_for('login') }}">Iniciar Sesión</a></li>
+                <li><a class="nav-button" href="{{ url_for('register') }}">Registrarse</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+    <footer>
+        <p>© 2024 TodoBet. Todos los derechos reservados.</p>
+        <ul>
+            <li><a href="#">Términos y Condiciones</a></li>
+            <li><a href="#">Política de Privacidad</a></li>
+            <li><a href="#">Contacto</a></li>
+            <li><a href="#">Redes Sociales</a></li>
+        </ul>
+    </footer>
+    <script>
+        gsap.from(".header", { duration: 1, x: -100, opacity: 0 });
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
